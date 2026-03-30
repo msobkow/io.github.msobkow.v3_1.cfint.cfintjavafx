@@ -73,7 +73,9 @@ implements ICFIntJavaFXSchema
 	protected ICFSecJavaFXSecTentGrpIncFactory factorySecTentGrpInc = null;
 	protected ICFSecJavaFXSecTentGrpMembFactory factorySecTentGrpMemb = null;
 	protected ICFSecJavaFXSecUserFactory factorySecUser = null;
+	protected ICFSecJavaFXSecUserEMConfFactory factorySecUserEMConf = null;
 	protected ICFSecJavaFXSecUserPWHistoryFactory factorySecUserPWHistory = null;
+	protected ICFSecJavaFXSecUserPWResetFactory factorySecUserPWReset = null;
 	protected ICFSecJavaFXSecUserPasswordFactory factorySecUserPassword = null;
 	protected ICFIntJavaFXSubProjectFactory factorySubProject = null;
 	protected ICFSecJavaFXSysClusterFactory factorySysCluster = null;
@@ -403,11 +405,25 @@ implements ICFIntJavaFXSchema
 		return( factorySecUser );
 	}
 
+	public ICFSecJavaFXSecUserEMConfFactory getSecUserEMConfFactory() {
+		if( factorySecUserEMConf == null ) {
+			factorySecUserEMConf = new CFSecJavaFXSecUserEMConfFactory( this );
+		}
+		return( factorySecUserEMConf );
+	}
+
 	public ICFSecJavaFXSecUserPWHistoryFactory getSecUserPWHistoryFactory() {
 		if( factorySecUserPWHistory == null ) {
 			factorySecUserPWHistory = new CFSecJavaFXSecUserPWHistoryFactory( this );
 		}
 		return( factorySecUserPWHistory );
+	}
+
+	public ICFSecJavaFXSecUserPWResetFactory getSecUserPWResetFactory() {
+		if( factorySecUserPWReset == null ) {
+			factorySecUserPWReset = new CFSecJavaFXSecUserPWResetFactory( this );
+		}
+		return( factorySecUserPWReset );
 	}
 
 	public ICFSecJavaFXSecUserPasswordFactory getSecUserPasswordFactory() {

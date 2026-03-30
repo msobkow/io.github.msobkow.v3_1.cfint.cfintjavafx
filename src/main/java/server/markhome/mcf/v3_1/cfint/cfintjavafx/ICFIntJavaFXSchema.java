@@ -109,7 +109,11 @@ public interface ICFIntJavaFXSchema
 
 	public ICFSecJavaFXSecUserFactory getSecUserFactory();
 
+	public ICFSecJavaFXSecUserEMConfFactory getSecUserEMConfFactory();
+
 	public ICFSecJavaFXSecUserPWHistoryFactory getSecUserPWHistoryFactory();
+
+	public ICFSecJavaFXSecUserPWResetFactory getSecUserPWResetFactory();
 
 	public ICFSecJavaFXSecUserPasswordFactory getSecUserPasswordFactory();
 
